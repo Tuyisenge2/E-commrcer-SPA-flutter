@@ -22,7 +22,7 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       // theme: ThemeData(fontFamily: ''),
       //home: HeroSection(),
-      home: Signup(),
+      home: ProfilePage(),
     );
   }
 }
