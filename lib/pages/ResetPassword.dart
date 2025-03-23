@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart' show SvgPicture;
 
-class Login extends StatelessWidget {
+class Resetpassword extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      padding: EdgeInsets.only(left: 25, top: 80, right: 25),
+      padding: EdgeInsets.only(left: 25, top: 100, right: 25),
       decoration: BoxDecoration(
         image: DecorationImage(
           image: AssetImage('assets/images/greenPlant.jpg'),
@@ -30,6 +30,7 @@ class Login extends StatelessWidget {
                   Container(
                     height: 45,
                     width: 40,
+                    // padding: EdgeInsets.all(0),
                     decoration: BoxDecoration(
                       color: Colors.green,
                       borderRadius: BorderRadius.all(Radius.circular(3)),
@@ -49,7 +50,7 @@ class Login extends StatelessWidget {
               ),
               SizedBox(height: 20),
               Text(
-                "SIGN IN",
+                "RESET PASSWORD",
                 style: TextStyle(
                   color: Colors.white,
                   fontSize: 25,
@@ -58,7 +59,7 @@ class Login extends StatelessWidget {
               ),
               SizedBox(height: 10),
               Text(
-                "Looks like you have an account. Let’s sign in into your account for you.",
+                "Looks like you want new password. Let’s reset your password for you.",
                 style: TextStyle(
                   color: Colors.white.withOpacity(0.5),
                   fontSize: 18,
@@ -75,7 +76,7 @@ class Login extends StatelessWidget {
                   ),
                   fillColor: Colors.white,
                   filled: true,
-                  hintText: "Email",
+                  hintText: "Password",
                 ),
               ),
               SizedBox(height: 10),
@@ -88,7 +89,7 @@ class Login extends StatelessWidget {
                   ),
                   fillColor: Colors.white,
                   filled: true,
-                  hintText: "Password",
+                  hintText: "Confirm Password",
                 ),
               ),
               SizedBox(height: 20),
@@ -103,24 +104,10 @@ class Login extends StatelessWidget {
                       borderRadius: BorderRadius.all(Radius.circular(8)),
                     ),
                   ),
-                  child: Text("LOGIN", style: TextStyle(color: Colors.white)),
+                  child: Text("SUBMIT", style: TextStyle(color: Colors.white)),
                 ),
               ),
-              SizedBox(height: 10),
-              SizedBox(
-                height: 47,
-                width: 400,
-                child: TextButton(
-                  onPressed: () {},
-                  style: TextButton.styleFrom(
-                    backgroundColor: Colors.green,
-                    shape: RoundedRectangleBorder(
-                      borderRadius: BorderRadius.all(Radius.circular(8)),
-                    ),
-                  ),
-                  child: Text("SIGN UP", style: TextStyle(color: Colors.white)),
-                ),
-              ),
+
               SizedBox(height: 20),
               Center(
                 child: Text(

@@ -8,7 +8,11 @@ class HeroSection extends StatelessWidget {
       //color: Colors.white,
       padding: EdgeInsets.only(top: 124, left: 10),
       decoration: BoxDecoration(
-        image: DecorationImage(image: AssetImage('assets/images/house2.jpg')),
+        image: DecorationImage(
+          image: AssetImage('assets/images/house2.jpg'),
+          fit: BoxFit.cover,
+          // repeat: ImageRepeat.repeat,
+        ),
       ),
       child: Scaffold(
         backgroundColor: Colors.transparent,
@@ -19,21 +23,33 @@ class HeroSection extends StatelessWidget {
               padding: const EdgeInsets.only(left: 30),
               child: Text(
                 "FULL CONTROL",
-                style: TextStyle(color: Colors.white, fontSize: 40),
+                style: TextStyle(
+                  color: Colors.white,
+                  fontSize: 40,
+                  fontWeight: FontWeight.w900,
+                ),
               ),
             ),
             Padding(
               padding: const EdgeInsets.only(left: 30),
               child: Text(
                 "FOR YOUR",
-                style: TextStyle(color: Colors.white, fontSize: 40),
+                style: TextStyle(
+                  color: Colors.white,
+                  fontSize: 40,
+                  fontWeight: FontWeight.w900,
+                ),
               ),
             ),
             Padding(
               padding: const EdgeInsets.only(left: 30),
               child: Text(
                 "SMART",
-                style: TextStyle(color: Colors.white, fontSize: 40),
+                style: TextStyle(
+                  color: Colors.white,
+                  fontSize: 40,
+                  fontWeight: FontWeight.w900,
+                ),
               ),
             ),
 
@@ -41,7 +57,11 @@ class HeroSection extends StatelessWidget {
               padding: const EdgeInsets.only(left: 30),
               child: Text(
                 "HOUSES",
-                style: TextStyle(color: Colors.white, fontSize: 40),
+                style: TextStyle(
+                  color: Colors.white,
+                  fontSize: 40,
+                  fontWeight: FontWeight.w900,
+                ),
               ),
             ),
 
@@ -51,8 +71,7 @@ class HeroSection extends StatelessWidget {
                 width: 250,
                 height: 70,
                 decoration: BoxDecoration(
-                  color: Colors.white.withOpacity(0.1),
-                  // border: Border.all(color: Colors.green),
+                  color: Colors.white.withOpacity(0.5),
                   borderRadius: BorderRadius.all(Radius.circular(50)),
                 ),
                 child: Row(
@@ -67,15 +86,13 @@ class HeroSection extends StatelessWidget {
                         borderRadius: BorderRadius.all(Radius.circular(50)),
                       ),
                       child: SvgPicture.asset('assets/icons/pd.svg'),
-
-                      //child: SvgPicture.asset('assets/icons/l.svg'),
                     ),
                     Text(
                       'Get Started',
                       style: TextStyle(
                         color: Colors.white,
                         fontSize: 20,
-                        fontWeight: FontWeight.w400,
+                        fontWeight: FontWeight.w700,
                       ),
                     ),
                     Row(

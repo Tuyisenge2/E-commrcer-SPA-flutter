@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart' show SvgPicture;
 
-class Login extends StatelessWidget {
+class Signup extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -19,7 +19,10 @@ class Login extends StatelessWidget {
       ),
       child: Scaffold(
         backgroundColor: Colors.transparent,
-
+        // appBar: AppBar(
+        //   // title: Text("ejndijdnfdi", style: TextStyle(color: Colors.white)),
+        //   backgroundColor: Colors.transparent,
+        // ),
         body: SingleChildScrollView(
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
@@ -30,6 +33,7 @@ class Login extends StatelessWidget {
                   Container(
                     height: 45,
                     width: 40,
+                    // padding: EdgeInsets.all(0),
                     decoration: BoxDecoration(
                       color: Colors.green,
                       borderRadius: BorderRadius.all(Radius.circular(3)),
@@ -49,7 +53,7 @@ class Login extends StatelessWidget {
               ),
               SizedBox(height: 20),
               Text(
-                "SIGN IN",
+                "SIGN UP",
                 style: TextStyle(
                   color: Colors.white,
                   fontSize: 25,
@@ -58,7 +62,7 @@ class Login extends StatelessWidget {
               ),
               SizedBox(height: 10),
               Text(
-                "Looks like you have an account. Let’s sign in into your account for you.",
+                "Looks like you don't have an account. Let’s create an account for you.",
                 style: TextStyle(
                   color: Colors.white.withOpacity(0.5),
                   fontSize: 18,
@@ -66,6 +70,19 @@ class Login extends StatelessWidget {
                 ),
               ),
               SizedBox(height: 20),
+
+              TextField(
+                decoration: InputDecoration(
+                  border: OutlineInputBorder(
+                    borderSide: BorderSide(color: Colors.white),
+                    borderRadius: BorderRadius.all(Radius.circular(8)),
+                  ),
+                  fillColor: Colors.white,
+                  filled: true,
+                  hintText: "Name",
+                ),
+              ),
+              SizedBox(height: 10),
 
               TextField(
                 decoration: InputDecoration(
@@ -103,7 +120,10 @@ class Login extends StatelessWidget {
                       borderRadius: BorderRadius.all(Radius.circular(8)),
                     ),
                   ),
-                  child: Text("LOGIN", style: TextStyle(color: Colors.white)),
+                  child: Text(
+                    "CREATE ACCOUNT",
+                    style: TextStyle(color: Colors.white),
+                  ),
                 ),
               ),
               SizedBox(height: 10),
@@ -118,7 +138,7 @@ class Login extends StatelessWidget {
                       borderRadius: BorderRadius.all(Radius.circular(8)),
                     ),
                   ),
-                  child: Text("SIGN UP", style: TextStyle(color: Colors.white)),
+                  child: Text("LOGIN", style: TextStyle(color: Colors.white)),
                 ),
               ),
               SizedBox(height: 20),
@@ -185,7 +205,6 @@ class Login extends StatelessWidget {
                   ),
                 ),
               ),
-              SizedBox(height: 20),
             ],
           ),
         ),

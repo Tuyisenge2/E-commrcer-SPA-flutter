@@ -44,6 +44,13 @@ flutter:
     - assets/images/house1.jpg
     - assets/images/kitchen.jpg
     - assets/images/house2.jpg
+    - assets/images/greenPlant.jpg
+    - assets/icons/wifi.svg
+    - assets/icons/google-icon.svg
+    - assets/icons/RectangleCurve.svg
+
+
+
 
 
   # fonts:
