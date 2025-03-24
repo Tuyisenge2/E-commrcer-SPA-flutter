@@ -48,6 +48,9 @@ flutter:
     - assets/icons/wifi.svg
     - assets/icons/google-icon.svg
     - assets/icons/RectangleCurve.svg
+    - assets/icons/edit.svg
+    - assets/icons/translate.svg
+
 
 
 
