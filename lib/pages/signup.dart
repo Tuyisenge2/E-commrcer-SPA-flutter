@@ -1,11 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart' show SvgPicture;
+import 'package:go_router/go_router.dart';
 
 class Signup extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      padding: EdgeInsets.only(left: 25, top: 80, right: 25),
+      padding: EdgeInsets.only(left: 25, top: 65, right: 25),
       decoration: BoxDecoration(
         image: DecorationImage(
           image: AssetImage('assets/images/greenPlant.jpg'),
@@ -19,15 +20,16 @@ class Signup extends StatelessWidget {
       ),
       child: Scaffold(
         backgroundColor: Colors.transparent,
-        // appBar: AppBar(
-        //   // title: Text("ejndijdnfdi", style: TextStyle(color: Colors.white)),
-        //   backgroundColor: Colors.transparent,
-        // ),
         body: SingleChildScrollView(
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
+              IconButton(
+                onPressed: () => context.go("/login"),
+                icon: Icon(Icons.arrow_back, color: Colors.white),
+                iconSize: 30,
+              ),
               Row(
                 children: [
                   Container(

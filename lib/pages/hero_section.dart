@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:go_router/go_router.dart';
 
 class HeroSection extends StatelessWidget {
   @override
@@ -25,7 +26,7 @@ class HeroSection extends StatelessWidget {
                 "FULL CONTROL",
                 style: TextStyle(
                   color: Colors.white,
-                  fontSize: 40,
+                  fontSize: 48,
                   fontWeight: FontWeight.w900,
                 ),
               ),
@@ -36,7 +37,7 @@ class HeroSection extends StatelessWidget {
                 "FOR YOUR",
                 style: TextStyle(
                   color: Colors.white,
-                  fontSize: 40,
+                  fontSize: 48,
                   fontWeight: FontWeight.w900,
                 ),
               ),
@@ -47,7 +48,7 @@ class HeroSection extends StatelessWidget {
                 "SMART",
                 style: TextStyle(
                   color: Colors.white,
-                  fontSize: 40,
+                  fontSize: 48,
                   fontWeight: FontWeight.w900,
                 ),
               ),
@@ -59,50 +60,55 @@ class HeroSection extends StatelessWidget {
                 "HOUSES",
                 style: TextStyle(
                   color: Colors.white,
-                  fontSize: 40,
+                  fontSize: 48,
                   fontWeight: FontWeight.w900,
                 ),
               ),
             ),
 
-            SizedBox(height: 350),
-            Center(
-              child: Container(
-                width: 250,
-                height: 70,
-                decoration: BoxDecoration(
-                  color: Colors.white.withOpacity(0.5),
-                  borderRadius: BorderRadius.all(Radius.circular(50)),
-                ),
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                  children: [
-                    Container(
-                      height: 50,
-                      width: 50,
-                      padding: EdgeInsets.all(10),
-                      decoration: BoxDecoration(
-                        color: Colors.green,
-                        borderRadius: BorderRadius.all(Radius.circular(50)),
+            SizedBox(height: 310),
+            TextButton(
+              onPressed: () {
+                context.go('/login');
+              },
+              child: Center(
+                child: Container(
+                  width: 250,
+                  height: 70,
+                  decoration: BoxDecoration(
+                    color: Colors.white.withOpacity(0.5),
+                    borderRadius: BorderRadius.all(Radius.circular(50)),
+                  ),
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                    children: [
+                      Container(
+                        height: 50,
+                        width: 50,
+                        padding: EdgeInsets.all(10),
+                        decoration: BoxDecoration(
+                          color: Colors.green,
+                          borderRadius: BorderRadius.all(Radius.circular(50)),
+                        ),
+                        child: SvgPicture.asset('assets/icons/pd.svg'),
                       ),
-                      child: SvgPicture.asset('assets/icons/pd.svg'),
-                    ),
-                    Text(
-                      'Get Started',
-                      style: TextStyle(
-                        color: Colors.white,
-                        fontSize: 20,
-                        fontWeight: FontWeight.w700,
+                      Text(
+                        'Get Started',
+                        style: TextStyle(
+                          color: Colors.white,
+                          fontSize: 20,
+                          fontWeight: FontWeight.w700,
+                        ),
                       ),
-                    ),
-                    Row(
-                      children: [
-                        SvgPicture.asset('assets/icons/G-2.svg'),
-                        SvgPicture.asset('assets/icons/G-1.svg'),
-                        SvgPicture.asset('assets/icons/G.svg'),
-                      ],
-                    ),
-                  ],
+                      Row(
+                        children: [
+                          SvgPicture.asset('assets/icons/G-2.svg'),
+                          SvgPicture.asset('assets/icons/G-1.svg'),
+                          SvgPicture.asset('assets/icons/G.svg'),
+                        ],
+                      ),
+                    ],
+                  ),
                 ),
               ),
             ),

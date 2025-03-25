@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart' show SvgPicture;
+import 'package:go_router/go_router.dart';
 
 class Login extends StatelessWidget {
   @override
@@ -111,7 +112,9 @@ class Login extends StatelessWidget {
                 height: 47,
                 width: 400,
                 child: TextButton(
-                  onPressed: () {},
+                  onPressed: () {
+                    context.go('/signup');
+                  },
                   style: TextButton.styleFrom(
                     backgroundColor: Colors.green,
                     shape: RoundedRectangleBorder(

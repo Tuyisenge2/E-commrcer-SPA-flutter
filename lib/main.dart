@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
 import 'package:new_app/pages/LoginPage.dart';
 import 'package:new_app/pages/ResetPassword.dart' show Resetpassword;
 import 'package:new_app/pages/forgetPassword.dart' show Forgetpassword;
@@ -9,20 +10,29 @@ import 'package:new_app/pages/profile_page.dart';
 import 'package:new_app/pages/signup.dart' show Signup;
 
 void main() {
-  runApp(const MyApp());
+  runApp(MyApp());
 }
 
 class MyApp extends StatelessWidget {
-  const MyApp({super.key});
+  MyApp({super.key});
+
+  final GoRouter _router = GoRouter(
+    routes: [
+      GoRoute(path: '/', builder: (context, state) => HeroSection()),
+      GoRoute(path: '/Login', builder: (context, state) => Login()),
+      GoRoute(path: '/signup', builder: (context, state) => Signup()),
+    ],
+  );
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
+    return MaterialApp.router(
       title: 'Flutter Demo',
       debugShowCheckedModeBanner: false,
-      // theme: ThemeData(fontFamily: ''),
+      //theme: ThemeData(fontFamily: ''),
       //home: HeroSection(),
-      home: ProfilePage(),
+      //home: ProfilePage(),
+      routerConfig: _router,
     );
   }
 }
