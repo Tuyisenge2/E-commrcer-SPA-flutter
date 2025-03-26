@@ -10,7 +10,7 @@ class HeroSection extends StatelessWidget {
       padding: EdgeInsets.only(top: 124, left: 10),
       decoration: BoxDecoration(
         image: DecorationImage(
-          image: AssetImage('assets/images/house2.jpg'),
+          image: AssetImage('assets/images/heroBg2.jpg'),
           fit: BoxFit.cover,
           // repeat: ImageRepeat.repeat,
         ),
@@ -69,7 +69,7 @@ class HeroSection extends StatelessWidget {
             SizedBox(height: 310),
             TextButton(
               onPressed: () {
-            //    context.go('/login');
+                //    context.go('/login');
                 context.push('/login');
               },
               child: Center(
