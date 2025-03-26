@@ -1,11 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart' show SvgPicture;
+import 'package:new_app/components/back_button.dart';
 
 class Forgetpassword extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      padding: EdgeInsets.only(left: 25, top: 80, right: 25),
+      padding: EdgeInsets.only(left: 25, top: 65, right: 25),
       decoration: BoxDecoration(
         image: DecorationImage(
           image: AssetImage('assets/images/greenPlant.jpg'),
@@ -25,6 +26,8 @@ class Forgetpassword extends StatelessWidget {
             crossAxisAlignment: CrossAxisAlignment.start,
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
+              BackButtonComponent(route: "/login"),
+
               Row(
                 children: [
                   Container(

@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart' show SvgPicture;
 import 'package:go_router/go_router.dart';
+import 'package:new_app/components/back_button.dart';
+import 'package:new_app/components/forget_button.dart';
 
 class Signup extends StatelessWidget {
   @override
@@ -25,11 +27,12 @@ class Signup extends StatelessWidget {
             crossAxisAlignment: CrossAxisAlignment.start,
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              IconButton(
-                onPressed: () => context.go("/login"),
-                icon: Icon(Icons.arrow_back, color: Colors.white),
-                iconSize: 30,
-              ),
+              // IconButton(
+              //   onPressed: () => context.go("/login"),
+              //   icon: Icon(Icons.arrow_back, color: Colors.white),
+              //   iconSize: 30,
+              // ),
+              BackButtonComponent(route: "/login"),
               Row(
                 children: [
                   Container(
@@ -133,7 +136,7 @@ class Signup extends StatelessWidget {
                 height: 47,
                 width: 400,
                 child: TextButton(
-                  onPressed: () {},
+                  onPressed: () => context.push("/login"),
                   style: TextButton.styleFrom(
                     backgroundColor: Colors.green,
                     shape: RoundedRectangleBorder(
@@ -144,16 +147,8 @@ class Signup extends StatelessWidget {
                 ),
               ),
               SizedBox(height: 20),
-              Center(
-                child: Text(
-                  "FORGET PASSWORD?",
-                  style: TextStyle(
-                    color: Colors.white,
-                    fontSize: 18,
-                    fontWeight: FontWeight.w800,
-                  ),
-                ),
-              ),
+
+              ForgetButton(),
               SizedBox(height: 20),
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceEvenly,

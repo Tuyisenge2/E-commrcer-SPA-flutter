@@ -69,7 +69,8 @@ class HeroSection extends StatelessWidget {
             SizedBox(height: 310),
             TextButton(
               onPressed: () {
-                context.go('/login');
+            //    context.go('/login');
+                context.push('/login');
               },
               child: Center(
                 child: Container(

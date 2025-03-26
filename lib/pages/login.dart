@@ -1,12 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart' show SvgPicture;
 import 'package:go_router/go_router.dart';
+import 'package:new_app/components/back_button.dart';
+import 'package:new_app/components/forget_button.dart';
 
 class Login extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      padding: EdgeInsets.only(left: 25, top: 80, right: 25),
+      padding: EdgeInsets.only(left: 25, top: 65, right: 25),
       decoration: BoxDecoration(
         image: DecorationImage(
           image: AssetImage('assets/images/greenPlant.jpg'),
@@ -26,6 +28,8 @@ class Login extends StatelessWidget {
             crossAxisAlignment: CrossAxisAlignment.start,
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
+              BackButtonComponent(route: "/"),
+
               Row(
                 children: [
                   Container(
@@ -113,7 +117,9 @@ class Login extends StatelessWidget {
                 width: 400,
                 child: TextButton(
                   onPressed: () {
-                    context.go('/signup');
+                   // context.go('/signup');
+                    context.push('/signup');
+
                   },
                   style: TextButton.styleFrom(
                     backgroundColor: Colors.green,
@@ -125,16 +131,21 @@ class Login extends StatelessWidget {
                 ),
               ),
               SizedBox(height: 20),
-              Center(
-                child: Text(
-                  "FORGET PASSWORD?",
-                  style: TextStyle(
-                    color: Colors.white,
-                    fontSize: 18,
-                    fontWeight: FontWeight.w800,
-                  ),
-                ),
-              ),
+              // Center(
+              //   child:
+              //   TextButton(
+              //     onPressed: () => context.push('/forget'),
+              //     child: Text(
+              //       "FORGET PASSWORD?",
+              //       style: TextStyle(
+              //         color: Colors.white,
+              //         fontSize: 18,
+              //         fontWeight: FontWeight.w800,
+              //       ),
+              //     ),
+              //   ),
+              // ),
+              ForgetButton(),
               SizedBox(height: 20),
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceEvenly,
