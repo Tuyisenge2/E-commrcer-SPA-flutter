@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
+import 'package:new_app/pages/Dashboard/Dashboard.dart';
 import 'package:new_app/pages/LoginPage.dart';
 import 'package:new_app/pages/ResetPassword.dart' show Resetpassword;
 import 'package:new_app/pages/forgetPassword.dart' show Forgetpassword;
@@ -22,6 +23,7 @@ class MyApp extends StatelessWidget {
       GoRoute(path: '/Login', builder: (context, state) => Login()),
       GoRoute(path: '/signup', builder: (context, state) => Signup()),
       GoRoute(path: '/forget', builder: (context, state) => Forgetpassword()),
+      GoRoute(path: '/dashboard', builder: (context, state) => Dashboard()),
     ],
   );
 

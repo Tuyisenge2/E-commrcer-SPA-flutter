@@ -101,7 +101,9 @@ class Login extends StatelessWidget {
                 height: 47,
                 width: 400,
                 child: TextButton(
-                  onPressed: () {},
+                  onPressed: () {
+                    context.push('/dashboard');
+                  },
                   style: TextButton.styleFrom(
                     backgroundColor: Colors.green,
                     shape: RoundedRectangleBorder(
@@ -117,9 +119,8 @@ class Login extends StatelessWidget {
                 width: 400,
                 child: TextButton(
                   onPressed: () {
-                   // context.go('/signup');
+                    // context.go('/signup');
                     context.push('/signup');
-
                   },
                   style: TextButton.styleFrom(
                     backgroundColor: Colors.green,
@@ -131,20 +132,6 @@ class Login extends StatelessWidget {
                 ),
               ),
               SizedBox(height: 20),
-              // Center(
-              //   child:
-              //   TextButton(
-              //     onPressed: () => context.push('/forget'),
-              //     child: Text(
-              //       "FORGET PASSWORD?",
-              //       style: TextStyle(
-              //         color: Colors.white,
-              //         fontSize: 18,
-              //         fontWeight: FontWeight.w800,
-              //       ),
-              //     ),
-              //   ),
-              // ),
               ForgetButton(),
               SizedBox(height: 20),
               Row(
@@ -152,6 +139,7 @@ class Login extends StatelessWidget {
                 children: [
                   Container(
                     width: 150,
+                    //width: sx(12),
                     decoration: BoxDecoration(
                       border: Border.all(color: Colors.white, width: 1),
                     ),

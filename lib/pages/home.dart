@@ -48,7 +48,8 @@ class HomePage extends StatelessWidget {
               SizedBox(height: 15),
               ListView.separated(
                 itemBuilder: (context, index) {
-                  return Container(
+                  return
+                  Container(
                     height: 115,
                     decoration: BoxDecoration(
                       color:
