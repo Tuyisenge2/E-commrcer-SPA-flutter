@@ -4,13 +4,15 @@ import 'package:go_router/go_router.dart';
 import 'package:new_app/components/back_button.dart';
 import 'package:new_app/components/forget_button.dart';
 import 'package:new_app/components/input_field.dart';
+import 'package:new_app/components/responsive_text.dart';
 
 class Login extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    double screenWidth = MediaQuery.of(context).size.width;
     return Container(
       padding: EdgeInsets.only(left: 25, top: 65, right: 25),
+      width: double.infinity,
+      height: double.infinity,
       decoration: BoxDecoration(
         image: DecorationImage(
           image: AssetImage('assets/images/greenPlant.jpg'),
@@ -34,41 +36,44 @@ class Login extends StatelessWidget {
 
               Row(
                 children: [
-                  Container(
-                    height: 45,
-                    width: 40,
-                    decoration: BoxDecoration(
-                      color: Colors.green,
-                      borderRadius: BorderRadius.all(Radius.circular(3)),
+                  Flexible(
+                    // fit: FlexFit.tight,
+                    child: Container(
+                      height: 45,
+                      width: 40,
+                      decoration: BoxDecoration(
+                        color: Colors.green,
+                        borderRadius: BorderRadius.all(Radius.circular(3)),
+                      ),
+                      child: SvgPicture.asset('assets/icons/wifi.svg'),
                     ),
-                    child: SvgPicture.asset('assets/icons/wifi.svg'),
                   ),
                   SizedBox(width: 14),
-                  Text(
-                    'HomeSync',
-                    style: TextStyle(
-                      color: Colors.white,
-                      fontSize: 45,
-                      fontWeight: FontWeight.w900,
-                    ),
+                  ResponsiveText(
+                    text: 'HomeSync',
+                    textColor: Colors.white,
+                    fontSize: 30,
+                    fontweight: FontWeight.w900,
                   ),
                 ],
               ),
               SizedBox(height: 20),
+
               Text(
                 "SIGN IN",
                 style: TextStyle(
                   color: Colors.white,
-                  fontSize: 25,
+                  fontSize: 17,
                   fontWeight: FontWeight.w500,
                 ),
               ),
+
               SizedBox(height: 10),
               Text(
                 "Looks like you have an account. Let’s sign in into your account for you.",
                 style: TextStyle(
                   color: Colors.white.withOpacity(0.5),
-                  fontSize: 18,
+                  fontSize: 17,
                   fontWeight: FontWeight.w900,
                 ),
               ),
@@ -180,9 +185,20 @@ class Login extends StatelessWidget {
                         height: 15,
                         child: SvgPicture.asset('assets/icons/google-icon.svg'),
                       ),
-                      Text(
-                        "SIGN UP WITH GOOGLE",
-                        style: TextStyle(color: Colors.black, fontSize: 16),
+
+                      // Flexible(
+                      //   child: FittedBox(
+                      //     fit: BoxFit.scaleDown,
+                      //     child: Text(
+                      //       "SIGN UP WITH GOOGLE",
+                      //       style: TextStyle(color: Colors.black, fontSize: 16),
+                      //     ),
+                      //   ),
+                      // ),
+                      ResponsiveText(
+                        text: "SIGN UP WITH GOOGLE",
+                        textColor: Colors.black,
+                        fontSize: 16,
                       ),
                     ],
                   ),
