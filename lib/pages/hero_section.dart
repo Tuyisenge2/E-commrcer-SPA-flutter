@@ -5,6 +5,7 @@ import 'package:go_router/go_router.dart';
 class HeroSection extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
+
     return Container(
       //color: Colors.white,
       padding: EdgeInsets.only(top: 124, left: 10),
@@ -24,9 +25,10 @@ class HeroSection extends StatelessWidget {
               padding: const EdgeInsets.only(left: 30),
               child: Text(
                 "FULL CONTROL",
+                textScaler: TextScaler.linear(3.2),
                 style: TextStyle(
                   color: Colors.white,
-                  fontSize: 48,
+                  //  fontSize: fontSize,
                   fontWeight: FontWeight.w900,
                 ),
               ),

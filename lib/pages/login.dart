@@ -3,10 +3,12 @@ import 'package:flutter_svg/svg.dart' show SvgPicture;
 import 'package:go_router/go_router.dart';
 import 'package:new_app/components/back_button.dart';
 import 'package:new_app/components/forget_button.dart';
+import 'package:new_app/components/input_field.dart';
 
 class Login extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
+    double screenWidth = MediaQuery.of(context).size.width;
     return Container(
       padding: EdgeInsets.only(left: 25, top: 65, right: 25),
       decoration: BoxDecoration(
@@ -71,31 +73,14 @@ class Login extends StatelessWidget {
                 ),
               ),
               SizedBox(height: 20),
-
-              TextField(
-                decoration: InputDecoration(
-                  border: OutlineInputBorder(
-                    borderSide: BorderSide(color: Colors.white),
-                    borderRadius: BorderRadius.all(Radius.circular(8)),
-                  ),
-                  fillColor: Colors.white,
-                  filled: true,
-                  hintText: "Email",
-                ),
-              ),
+              InputField(width: 400, hint: 'Email', inputColor: Colors.white),
               SizedBox(height: 10),
-
-              TextField(
-                decoration: InputDecoration(
-                  border: OutlineInputBorder(
-                    borderSide: BorderSide(color: Colors.white),
-                    borderRadius: BorderRadius.all(Radius.circular(8)),
-                  ),
-                  fillColor: Colors.white,
-                  filled: true,
-                  hintText: "Password",
-                ),
+              InputField(
+                width: 400,
+                hint: 'Password',
+                inputColor: Colors.white,
               ),
+
               SizedBox(height: 20),
               SizedBox(
                 height: 47,
@@ -119,7 +104,6 @@ class Login extends StatelessWidget {
                 width: 400,
                 child: TextButton(
                   onPressed: () {
-                    // context.go('/signup');
                     context.push('/signup');
                   },
                   style: TextButton.styleFrom(
@@ -137,9 +121,20 @@ class Login extends StatelessWidget {
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                 children: [
+                  // SizedBox(
+                  //   width: screenWidth,
+                  //   child: FractionallySizedBox(
+                  //     widthFactor: 0.2,
+                  //     child: Container(
+                  //       //  width: double.infinity,
+                  //       decoration: BoxDecoration(
+                  //         border: Border.all(color: Colors.white, width: 1),
+                  //       ),
+                  //     ),
+                  //   ),
+                  // ),
                   Container(
-                    width: 150,
-                    //width: sx(12),
+                    width: MediaQuery.of(context).size.width * 0.2,
                     decoration: BoxDecoration(
                       border: Border.all(color: Colors.white, width: 1),
                     ),
@@ -153,11 +148,17 @@ class Login extends StatelessWidget {
                     ),
                   ),
                   Container(
-                    width: 150,
+                    width: MediaQuery.of(context).size.width * 0.2,
                     decoration: BoxDecoration(
                       border: Border.all(color: Colors.white, width: 1),
                     ),
                   ),
+                  // Container(
+                  //   width: 150,
+                  //   decoration: BoxDecoration(
+                  //     border: Border.all(color: Colors.white, width: 1),
+                  //   ),
+                  // ),
                 ],
               ),
               SizedBox(height: 20),
