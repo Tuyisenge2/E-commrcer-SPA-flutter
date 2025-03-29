@@ -39,7 +39,7 @@ class Resetpassword extends StatelessWidget {
                   ),
                   SizedBox(width: 14),
                   Text(
-                    'HomeSync',
+                    'HOMESYNC',
                     style: TextStyle(
                       color: Colors.white,
                       fontSize: 45,

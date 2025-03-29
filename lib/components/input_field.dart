@@ -24,18 +24,6 @@ class InputField extends StatelessWidget {
     );
   }
 }
-              // ConstrainedBox(
-              //   constraints: BoxConstraints(maxWidth: 400),
-              //   child: TextField(
-              //     maxLength: 20,
-              //     decoration: InputDecoration(
-              //       border: OutlineInputBorder(
-              //         borderSide: BorderSide(color: Colors.white),
-              //         borderRadius: BorderRadius.all(Radius.circular(8)),
-              //       ),
-              //       fillColor: Colors.white,
-              //       filled: true,
-              //       hintText: "Email",
-              //     ),
-              //   ),
-              // ),
+              
+              
+            

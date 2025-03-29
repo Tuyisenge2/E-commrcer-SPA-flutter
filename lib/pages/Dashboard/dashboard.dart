@@ -29,6 +29,20 @@ class Dashboard extends StatelessWidget {
             ],
           ),
           Spacer(),
+          Container(
+            width: double.infinity,
+            height: 50,
+            color: Colors.red[300],
+            child: FractionallySizedBox(
+              alignment: Alignment.topRight,
+              widthFactor: 0.8,
+              heightFactor: 0.8,
+              child: SizedBox(
+                child: Container(child: Container(color: Colors.yellow)),
+              ),
+            ),
+          ),
+          Spacer(),
           Flexible(
             fit: FlexFit.tight,
             child: Container(
@@ -37,7 +51,7 @@ class Dashboard extends StatelessWidget {
               decoration: BoxDecoration(color: Colors.blue),
             ),
           ),
-          
+          Spacer(),
         ],
       ),
     );

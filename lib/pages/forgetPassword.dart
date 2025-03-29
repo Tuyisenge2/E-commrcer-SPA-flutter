@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart' show SvgPicture;
 import 'package:new_app/components/back_button.dart';
+import 'package:new_app/components/input_field.dart';
+import 'package:new_app/components/responsive_text.dart';
 
 class Forgetpassword extends StatelessWidget {
   @override
@@ -30,24 +32,24 @@ class Forgetpassword extends StatelessWidget {
 
               Row(
                 children: [
-                  Container(
-                    height: 45,
-                    width: 40,
-                    // padding: EdgeInsets.all(0),
-                    decoration: BoxDecoration(
-                      color: Colors.green,
-                      borderRadius: BorderRadius.all(Radius.circular(3)),
+                  Flexible(
+                    child: Container(
+                      height: 45,
+                      width: 40,
+                      decoration: BoxDecoration(
+                        color: Colors.green,
+                        borderRadius: BorderRadius.all(Radius.circular(3)),
+                      ),
+                      child: SvgPicture.asset('assets/icons/wifi.svg'),
                     ),
-                    child: SvgPicture.asset('assets/icons/wifi.svg'),
                   ),
                   SizedBox(width: 14),
-                  Text(
-                    'HomeSync',
-                    style: TextStyle(
-                      color: Colors.white,
-                      fontSize: 45,
-                      fontWeight: FontWeight.w900,
-                    ),
+
+                  ResponsiveText(
+                    text: 'HOMESYNC',
+                    textColor: Colors.white,
+                    fontSize: 40,
+                    fontweight: FontWeight.w900,
                   ),
                 ],
               ),
@@ -56,33 +58,25 @@ class Forgetpassword extends StatelessWidget {
                 "FORGET PASSWORD",
                 style: TextStyle(
                   color: Colors.white,
-                  fontSize: 25,
+                  fontSize: 21,
                   fontWeight: FontWeight.w500,
                 ),
               ),
               SizedBox(height: 10),
-              Text(
-                "Looks like you have forgot your password. Let’s create new password for you. Enter your Email",
-                style: TextStyle(
-                  color: Colors.white.withOpacity(0.5),
-                  fontSize: 18,
-                  fontWeight: FontWeight.w900,
+              SizedBox(
+                width: 400,
+                child: Text(
+                  "Looks like you have forgot your password. Let’s create new password for you. Enter your Email",
+                  style: TextStyle(
+                    color: Colors.white.withOpacity(0.5),
+                    fontSize: 18,
+                    fontWeight: FontWeight.w900,
+                  ),
                 ),
               ),
               SizedBox(height: 20),
 
-              TextField(
-                decoration: InputDecoration(
-                  border: OutlineInputBorder(
-                    borderSide: BorderSide(color: Colors.white),
-                    borderRadius: BorderRadius.all(Radius.circular(8)),
-                  ),
-                  fillColor: Colors.white,
-                  filled: true,
-                  hintText: "Email",
-                ),
-              ),
-
+              InputField(width: 400, hint: 'Email', inputColor: Colors.white),
               SizedBox(height: 20),
               SizedBox(
                 height: 47,
