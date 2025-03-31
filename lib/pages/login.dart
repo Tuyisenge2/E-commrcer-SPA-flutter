@@ -25,7 +25,6 @@ class Login extends StatelessWidget {
       ),
       child: Scaffold(
         backgroundColor: Colors.transparent,
-
         body: SizedBox(
           height: double.infinity,
           width: double.infinity,
