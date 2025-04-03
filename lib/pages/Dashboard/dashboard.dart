@@ -318,8 +318,21 @@ class Dashboard extends StatelessWidget {
                     ],
                   ),
                 ),
-
-            //    Row(children: [Text('Scenes'), PlusButton()]),
+                SizedBox(height: 15),
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    Text(
+                      'Scenes',
+                      style: TextStyle(
+                        color: Colors.white,
+                        fontSize: 17,
+                        fontWeight: FontWeight.w800,
+                      ),
+                    ),
+                    PlusButton(),
+                  ],
+                ),
               ],
             ),
           ),
