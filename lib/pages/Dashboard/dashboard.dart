@@ -3,6 +3,7 @@ import 'package:flutter_svg/svg.dart';
 import 'package:new_app/components/nav_bar.dart';
 import 'package:new_app/components/plus_button.dart';
 import 'package:new_app/components/responsive_text.dart';
+import 'package:new_app/components/scene_card.dart';
 
 class Dashboard extends StatelessWidget {
   @override
@@ -333,6 +334,8 @@ class Dashboard extends StatelessWidget {
                     PlusButton(),
                   ],
                 ),
+
+                SceneCard()
               ],
             ),
           ),
