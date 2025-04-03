@@ -11,7 +11,7 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
-  go_router: ^14.8.1  
+  go_router: ^14.8.1
   responsive_builder: ^0.7.1
 
   cupertino_icons: ^1.0.8
@@ -53,11 +53,7 @@ flutter:
     - assets/icons/edit.svg
     - assets/icons/translate.svg
     - assets/images/heroBg2.jpg
-
-
-
-
-
+    - assets/icons/sunCloud.svg
 
   # fonts:
   #   - family: Schyler
