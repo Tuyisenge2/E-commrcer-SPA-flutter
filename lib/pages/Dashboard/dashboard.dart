@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:new_app/components/device_card.dart';
+import 'package:new_app/components/device_card2.dart';
 import 'package:new_app/components/nav_bar.dart';
 import 'package:new_app/components/plus_button.dart';
 import 'package:new_app/components/responsive_text.dart';
@@ -391,7 +392,20 @@ class Dashboard extends StatelessWidget {
                   ],
                 ),
                 SizedBox(height: 10),
-                DeviceCard(),
+                Column(
+                  children: [
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: [DeviceCard(), DeviceCard()],
+                    ),
+                    SizedBox(height: 16),
+
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: [DeviceCard2(), DeviceCard2()],
+                    ),
+                  ],
+                ),
               ],
             ),
           ),

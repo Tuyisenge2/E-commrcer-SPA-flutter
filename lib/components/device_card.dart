@@ -5,31 +5,38 @@ class DeviceCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      height: 190,
-      width: 140,
+      height: 160,
+      width: 170,
       padding: EdgeInsets.all(7),
       decoration: BoxDecoration(
         color: Colors.white.withOpacity(0.2),
         borderRadius: BorderRadius.circular(10),
       ),
       child: Column(
+        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+        crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           Padding(
-            padding: EdgeInsets.only(left: 98.0),
+            padding: EdgeInsets.only(left: 140.0),
             child: InkWell(child: SvgPicture.asset('assets/icons/less2.svg')),
           ),
           Image.asset('assets/images/AirCond.png'),
           Text(
-            "Air Conditioner",
-            style: TextStyle(fontSize: 18, color: Colors.white),
+            "Air Conditione",
+            style: TextStyle(fontSize: 18, color: Colors.white, height: 1),
           ),
+          //    SizedBox(height: 3),
           Text(
             "3 devices",
-            style: TextStyle(fontSize: 13, color: Colors.white),
+            style: TextStyle(fontSize: 13, color: Colors.white, height: 1),
           ),
-          IconButton(
-            onPressed: () {},
-            icon: SvgPicture.asset('assets/icons/toggleButton.svg'),
+
+          Padding(
+            padding: const EdgeInsets.only(left: 110.0),
+            child: InkWell(
+              onTap: () {},
+              child: SvgPicture.asset('assets/icons/toggleButton.svg'),
+            ),
           ),
         ],
       ),
