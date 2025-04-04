@@ -343,7 +343,17 @@ class Dashboard extends StatelessWidget {
                   ),
                   child: Column(
                     spacing: 4,
-                    children: [SceneCard(), SceneCard()],
+                    children: [
+                      SceneCard(
+                        sceneMess: 'Morning scene',
+                        iconPath: 'assets/icons/sun.svg',
+                        togglePath: 'assets/icons/toggleButton.svg',
+                      ),
+                      SceneCard(
+                        sceneMess: 'Night scene',
+                        iconPath: 'assets/icons/moon.svg',
+                        togglePath: 'assets/icons/toggleButton.svg',
+                      ),                    ],
                   ),
                 ),
               ],

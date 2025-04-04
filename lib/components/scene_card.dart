@@ -2,6 +2,14 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 
 class SceneCard extends StatelessWidget {
+  final String sceneMess;
+  final String iconPath;
+  final String togglePath;
+  const SceneCard({
+    required this.sceneMess,
+    required this.iconPath,
+    required this.togglePath,
+  });
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -23,13 +31,14 @@ class SceneCard extends StatelessWidget {
                 color: Colors.white.withOpacity(0.2),
                 borderRadius: BorderRadius.circular(400),
               ),
-              child: SvgPicture.asset('assets/icons/sun.svg'),
+              // child: SvgPicture.asset('assets/icons/sun.svg'),
+              child: SvgPicture.asset(iconPath),
             ),
           ),
           Expanded(
             flex: 3,
             child: Text(
-              'Morning Scene',
+              sceneMess,
               style: TextStyle(color: Colors.white, fontSize: 17),
             ),
           ),
@@ -37,7 +46,7 @@ class SceneCard extends StatelessWidget {
             flex: 1,
             child: IconButton(
               onPressed: () {},
-              icon: SvgPicture.asset('assets/icons/toggleButton.svg'),
+              icon: SvgPicture.asset(togglePath),
             ),
           ),
         ],
