@@ -319,7 +319,7 @@ class Dashboard extends StatelessWidget {
                     ],
                   ),
                 ),
-                SizedBox(height: 15),
+                SizedBox(height: 10),
                 Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
@@ -334,8 +334,18 @@ class Dashboard extends StatelessWidget {
                     PlusButton(),
                   ],
                 ),
-
-                SceneCard()
+                SizedBox(height: 10),
+                Container(
+                  padding: EdgeInsets.all(4),
+                  decoration: BoxDecoration(
+                    color: Colors.white.withOpacity(0.2),
+                    borderRadius: BorderRadius.circular(10),
+                  ),
+                  child: Column(
+                    spacing: 4,
+                    children: [SceneCard(), SceneCard()],
+                  ),
+                ),
               ],
             ),
           ),

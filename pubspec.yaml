@@ -54,6 +54,11 @@ flutter:
     - assets/icons/translate.svg
     - assets/images/heroBg2.jpg
     - assets/icons/sunCloud.svg
+    - assets/icons/moon.svg
+    - assets/icons/sun.svg
+    - assets/icons/toggleButton.svg
+
+
 
   # fonts:
   #   - family: Schyler
