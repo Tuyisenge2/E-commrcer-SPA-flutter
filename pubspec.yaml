@@ -57,7 +57,8 @@ flutter:
     - assets/icons/moon.svg
     - assets/icons/sun.svg
     - assets/icons/toggleButton.svg
-
+    - assets/images/AirCond.png
+    - assets/icons/less2.svg
 
 
   # fonts:

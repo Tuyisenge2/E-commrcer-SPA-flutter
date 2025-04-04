@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
+import 'package:new_app/components/device_card.dart';
 import 'package:new_app/components/nav_bar.dart';
 import 'package:new_app/components/plus_button.dart';
 import 'package:new_app/components/responsive_text.dart';
@@ -331,7 +332,7 @@ class Dashboard extends StatelessWidget {
                         fontWeight: FontWeight.w800,
                       ),
                     ),
-                    PlusButton(),
+                    PlusButton(height: 24, width: 24),
                   ],
                 ),
                 SizedBox(height: 10),
@@ -353,9 +354,44 @@ class Dashboard extends StatelessWidget {
                         sceneMess: 'Night scene',
                         iconPath: 'assets/icons/moon.svg',
                         togglePath: 'assets/icons/toggleButton.svg',
-                      ),                    ],
+                      ),
+                    ],
                   ),
                 ),
+                SizedBox(height: 10),
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    Text(
+                      'My Device',
+                      style: TextStyle(
+                        color: Colors.white,
+                        fontSize: 17,
+                        fontWeight: FontWeight.w800,
+                      ),
+                    ),
+                    Container(
+                      height: 20,
+                      width: 100,
+                      decoration: BoxDecoration(
+                        color: Colors.white.withOpacity(0.2),
+                        borderRadius: BorderRadius.circular(20),
+                      ),
+                      child: Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                        children: [
+                          PlusButton(height: 15, width: 15),
+                          Text(
+                            'Add Device',
+                            style: TextStyle(color: Colors.white, fontSize: 13),
+                          ),
+                        ],
+                      ),
+                    ),
+                  ],
+                ),
+                SizedBox(height: 10),
+                DeviceCard(),
               ],
             ),
           ),
