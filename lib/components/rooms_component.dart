@@ -4,6 +4,9 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 
 class RoomsComponent extends StatelessWidget {
+  final String roomName;
+  final int deviceCount;
+  const RoomsComponent({required this.roomName, required this.deviceCount});
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -12,8 +15,8 @@ class RoomsComponent extends StatelessWidget {
       decoration: BoxDecoration(
         color: Colors.white,
         borderRadius: BorderRadius.only(
-          topLeft: Radius.circular(20),
-          topRight: Radius.circular(20),
+          topLeft: Radius.circular(10),
+          topRight: Radius.circular(10),
         ),
         image: DecorationImage(
           image: AssetImage('assets/images/livingRoom.jpg'),
@@ -42,20 +45,33 @@ class RoomsComponent extends StatelessWidget {
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: [
                           Text(
-                            'Living Room',
+                            roomName,
                             style: TextStyle(
                               color: Colors.white,
                               fontWeight: FontWeight.w700,
                               fontSize: 18,
                             ),
                           ),
-                          Text(
-                            '5 Device',
-                            style: TextStyle(
-                              color: Colors.white.withOpacity(0.6),
-                              fontWeight: FontWeight.w700,
-                              fontSize: 14,
-                            ),
+                          Row(
+                            crossAxisAlignment: CrossAxisAlignment.center,
+                            children: [
+                              Text(
+                                '$deviceCount Devices',
+                                style: TextStyle(
+                                  color: Colors.white.withOpacity(0.6),
+                                  fontWeight: FontWeight.w700,
+                                  fontSize: 14,
+                                ),
+                              ),
+                              SizedBox(width: 10),
+                              InkWell(
+                                child: SvgPicture.asset(
+                                  'assets/icons/less2.svg',
+                                  height: 10,
+                                  width: 10,
+                                ),
+                              ),
+                            ],
                           ),
                         ],
                       ),
