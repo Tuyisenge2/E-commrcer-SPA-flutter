@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
+import 'package:new_app/components/bottom_navigation.dart';
 import 'package:new_app/components/device_card.dart';
 import 'package:new_app/components/device_card2.dart';
 import 'package:new_app/components/nav_bar.dart';
 import 'package:new_app/components/plus_button.dart';
-import 'package:new_app/components/responsive_text.dart';
 import 'package:new_app/components/rooms_component.dart';
 import 'package:new_app/components/scene_card.dart';
 import 'package:new_app/components/title_add.dart';
@@ -15,11 +15,11 @@ class Dashboard extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         title: NavBar(),
-        backgroundColor: Colors.black,
+        backgroundColor: Colors.white.withOpacity(0),
         automaticallyImplyLeading: false,
         toolbarHeight: 80,
       ),
-      backgroundColor: Colors.black,
+      backgroundColor: Colors.white.withOpacity(.1),
       body: SizedBox(
         height: double.infinity,
         width: double.infinity,
@@ -44,7 +44,7 @@ class Dashboard extends StatelessWidget {
                             child: Container(
                               height: 200,
                               decoration: BoxDecoration(
-                                color: Colors.black,
+                                color: Colors.black.withOpacity(0.655),
                                 borderRadius: BorderRadius.circular(10),
                               ),
                               child: Column(
@@ -177,7 +177,7 @@ class Dashboard extends StatelessWidget {
                                     child: Container(
                                       width: double.infinity,
                                       decoration: BoxDecoration(
-                                        color: Colors.black,
+                                        color: Colors.black.withOpacity(0.655),
                                         borderRadius: BorderRadius.circular(10),
                                       ),
                                       child: Column(
@@ -257,7 +257,7 @@ class Dashboard extends StatelessWidget {
                                   Flexible(
                                     child: Container(
                                       decoration: BoxDecoration(
-                                        color: Colors.black,
+                                        color: Colors.black.withOpacity(0.655),
                                         borderRadius: BorderRadius.circular(10),
                                       ),
                                       child: Column(
@@ -386,8 +386,8 @@ class Dashboard extends StatelessWidget {
                   children: [
                     RoomsComponent(roomName: 'Living Room', deviceCount: 5),
                     RoomsComponent(roomName: 'Bed Room', deviceCount: 2),
-                    RoomsComponent(roomName: 'Bed Room 2', deviceCount: 3),
-                    RoomsComponent(roomName: 'Kitchen', deviceCount: 4),
+                    RoomsComponent(roomName: 'Bed Room 2', deviceCount: 1),
+                    RoomsComponent(roomName: 'Kitchen', deviceCount: 1),
                   ],
                 ),
               ],
@@ -395,10 +395,7 @@ class Dashboard extends StatelessWidget {
           ),
         ),
       ),
-      floatingActionButton: Text(
-        'TabsActions',
-        style: TextStyle(color: Colors.blue),
-      ),
+      bottomNavigationBar: BottomNavigation(),
     );
   }
 }

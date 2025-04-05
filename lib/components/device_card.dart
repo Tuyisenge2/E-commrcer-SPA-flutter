@@ -9,7 +9,7 @@ class DeviceCard extends StatelessWidget {
       width: 170,
       padding: EdgeInsets.all(7),
       decoration: BoxDecoration(
-        color: Colors.white.withOpacity(0.2),
+        color: Colors.white.withOpacity(0.1),
         borderRadius: BorderRadius.circular(10),
       ),
       child: Column(
@@ -32,8 +32,7 @@ class DeviceCard extends StatelessWidget {
 
           Padding(
             padding: const EdgeInsets.only(left: 110.0),
-            child:
-             InkWell(
+            child: InkWell(
               onTap: () {},
               child: SvgPicture.asset('assets/icons/toggleButton.svg'),
             ),

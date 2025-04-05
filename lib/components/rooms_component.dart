@@ -56,7 +56,9 @@ class RoomsComponent extends StatelessWidget {
                             crossAxisAlignment: CrossAxisAlignment.center,
                             children: [
                               Text(
-                                '$deviceCount Devices',
+                                deviceCount < 2
+                                    ? '$deviceCount Device'
+                                    : '$deviceCount Devices',
                                 style: TextStyle(
                                   color: Colors.white.withOpacity(0.6),
                                   fontWeight: FontWeight.w700,
