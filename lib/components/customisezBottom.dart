@@ -3,8 +3,10 @@ import 'package:flutter_svg/flutter_svg.dart';
 
 class BottomNavigation extends StatelessWidget {
   @override
+  
   Widget build(BuildContext context) {
-    return SizedBox(
+    return
+     SizedBox(
       height: 90,
       width: double.infinity,
       child: FractionallySizedBox(

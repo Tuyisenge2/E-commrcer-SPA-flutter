@@ -22,8 +22,13 @@ class DeviceCard extends StatelessWidget {
           ),
           Image.asset('assets/images/AirCond.png'),
           Text(
-            "Air Conditione",
-            style: TextStyle(fontSize: 18, color: Colors.white, height: 1),
+            "Air Conditioner",
+            style: TextStyle(
+              fontSize: 15,
+              color: Colors.white,
+              height: 1,
+              fontWeight: FontWeight.w900,
+            ),
           ),
           Text(
             "3 devices",
