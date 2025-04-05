@@ -59,6 +59,11 @@ flutter:
     - assets/icons/toggleButton.svg
     - assets/images/AirCond.png
     - assets/icons/less2.svg
+    - assets/images/livingRoom.jpg
+    - assets/images/bedRoom.jpg
+    - assets/images/kitchen2.jpg
+
+
 
 
   # fonts:

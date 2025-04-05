@@ -25,7 +25,6 @@ class DeviceCard extends StatelessWidget {
             "Air Conditione",
             style: TextStyle(fontSize: 18, color: Colors.white, height: 1),
           ),
-          //    SizedBox(height: 3),
           Text(
             "3 devices",
             style: TextStyle(fontSize: 13, color: Colors.white, height: 1),
@@ -33,7 +32,8 @@ class DeviceCard extends StatelessWidget {
 
           Padding(
             padding: const EdgeInsets.only(left: 110.0),
-            child: InkWell(
+            child:
+             InkWell(
               onTap: () {},
               child: SvgPicture.asset('assets/icons/toggleButton.svg'),
             ),
