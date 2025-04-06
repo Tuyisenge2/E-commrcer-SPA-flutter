@@ -19,10 +19,11 @@ class _CreateScene extends State<CreateScene> {
         child: FractionallySizedBox(
           widthFactor: 0.9,
           child: SingleChildScrollView(
-            child: Padding(
+            child: Container(
               padding: EdgeInsets.only(
                 top: MediaQuery.of(context).size.height * 0.05,
               ),
+              height: MediaQuery.of(context).size.height * 0.9,
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
@@ -77,8 +78,7 @@ class _CreateScene extends State<CreateScene> {
                       ],
                     ),
                   ),
-
-                  //Container(child: Text('Create Your Scene'),)
+                  Spacer(),
                   Customizedbutton(),
                 ],
               ),
