@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
+import 'package:new_app/components/customizedButton.dart';
 import 'package:new_app/components/scene_card.dart';
 
 class CreateScene extends StatefulWidget {
@@ -77,8 +78,8 @@ class _CreateScene extends State<CreateScene> {
                     ),
                   ),
 
-//Container(child: Text('Create Scene'),)
-
+                  //Container(child: Text('Create Your Scene'),)
+                  Customizedbutton(),
                 ],
               ),
             ),
