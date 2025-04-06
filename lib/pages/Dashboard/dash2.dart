@@ -1,9 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
-import 'package:new_app/components/bottom_navigation.dart';
 import 'package:new_app/components/device_card.dart';
 import 'package:new_app/components/device_card2.dart';
-import 'package:new_app/components/nav_bar.dart';
 import 'package:new_app/components/plus_button.dart';
 import 'package:new_app/components/rooms_component.dart';
 import 'package:new_app/components/scene_card.dart';
@@ -12,16 +10,6 @@ import 'package:new_app/components/title_add.dart';
 class Dash2 extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    //  Scaffold(
-    //   appBar: AppBar(
-    //     title: NavBar(),
-    //     backgroundColor: Colors.white.withOpacity(0),
-    //     automaticallyImplyLeading: false,
-    //     toolbarHeight: 80,
-    //   ),
-    //   backgroundColor: Colors.white.withOpacity(.1),
-    //   body:
-
     return SizedBox(
       height: double.infinity,
       width: double.infinity,
@@ -337,10 +325,11 @@ class Dash2 extends StatelessWidget {
                       fontWeight: FontWeight.w800,
                     ),
                   ),
-                  PlusButton(height: 24, width: 24),
+                  PlusButton(height: 24, width: 24, path: '/createSCene'),
                 ],
               ),
               SizedBox(height: 10),
+             
               Container(
                 padding: EdgeInsets.all(4),
                 decoration: BoxDecoration(
@@ -363,6 +352,8 @@ class Dash2 extends StatelessWidget {
                   ],
                 ),
               ),
+              
+              
               SizedBox(height: 10),
               TitleAdd(firstLabel: 'My Device', AddLabel: 'Add Device'),
               SizedBox(height: 10),

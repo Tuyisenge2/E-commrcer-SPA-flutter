@@ -8,6 +8,7 @@ import 'package:new_app/pages/hero_section.dart';
 import 'package:new_app/pages/home.dart';
 import 'package:new_app/pages/login.dart' show Login;
 import 'package:new_app/pages/profile_page.dart';
+import 'package:new_app/pages/scene/create_scene.dart';
 import 'package:new_app/pages/signup.dart' show Signup;
 
 void main() {
@@ -27,6 +28,8 @@ class MyApp extends StatelessWidget {
         path: '/dashboard',
         builder: (context, state) => DashboardWithBottom(),
       ),
+      GoRoute(path: '/profile', builder: (context, state) => ProfilePage()),
+      GoRoute(path: '/createScene', builder: (context, state) => CreateScene()),
     ],
   );
 

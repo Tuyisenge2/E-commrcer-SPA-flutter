@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:new_app/components/responsive_text.dart';
+import 'package:go_router/go_router.dart';
 
 class NavBar extends StatelessWidget {
   @override
@@ -14,7 +15,7 @@ class NavBar extends StatelessWidget {
             Flexible(
               child: InkWell(
                 onTap: () {
-                  print('Hello world');
+                  context.push('/profile');
                 },
                 child: ClipRRect(
                   borderRadius: BorderRadius.circular(1240),

@@ -1,13 +1,17 @@
 import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
 
 class PlusButton extends StatelessWidget {
   final double height;
   final double width;
-  const PlusButton({required this.height, required this.width});
+  final String path;
+  const PlusButton({required this.height, required this.width, this.path='/'});
   @override
   Widget build(BuildContext context) {
     return InkWell(
-      onTap: () {},
+      onTap: () {
+        context.push(path);
+      },
       child: Container(
         height: height,
         width: width,

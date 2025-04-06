@@ -33,11 +33,11 @@ class _DashboardState extends State<DashboardWithBottom> {
 
   SizedBox bottomnavigation(BuildContext context) {
     return SizedBox(
-      height: 90,
+      height: 50,
       width: double.infinity,
       child: FractionallySizedBox(
-        widthFactor: 0.8,
-        heightFactor: 0.6,
+        widthFactor: 0.85,
+        heightFactor: 0.8,
         child: Container(
           height: 60,
           decoration: BoxDecoration(color: Colors.black.withOpacity(0.3)),
