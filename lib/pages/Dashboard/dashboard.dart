@@ -1,7 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
 import 'package:flutter_svg/svg.dart';
-import 'package:new_app/components/bottom_navigation.dart';
 import 'package:new_app/components/nav_bar.dart';
 import 'package:new_app/pages/Dashboard/dash2.dart';
 import 'package:new_app/pages/Dashboard/dash3.dart';
@@ -107,7 +105,7 @@ class _DashboardState extends State<DashboardWithBottom> {
                               ),
                               SizedBox(width: 10),
                               Text(
-                                'Appointments',
+                                'Rooms',
                                 style: TextStyle(fontWeight: FontWeight.w800),
                               ),
                             ],

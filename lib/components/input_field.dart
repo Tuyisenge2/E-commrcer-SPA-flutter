@@ -5,7 +5,12 @@ class InputField extends StatelessWidget {
   final String hint;
   final Color inputColor;
 
-  const InputField({super.key, required this.width, required this.hint,required this.inputColor});
+  const InputField({
+    super.key,
+    required this.width,
+    required this.hint,
+    required this.inputColor,
+  });
   @override
   Widget build(BuildContext context) {
     return ConstrainedBox(
@@ -24,6 +29,3 @@ class InputField extends StatelessWidget {
     );
   }
 }
-              
-              
-            
