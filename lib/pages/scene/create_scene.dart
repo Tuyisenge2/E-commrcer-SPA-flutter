@@ -80,6 +80,7 @@ class _CreateScene extends State<CreateScene> {
                 label: 'Continue',
                 labelColor: Colors.black,
                 buttonColor: Color(0xFFB9F249),
+                bottomModal: creatSceneSecondModal,
               ),
               Customizedbutton(
                 label: 'Back',
@@ -88,6 +89,20 @@ class _CreateScene extends State<CreateScene> {
               ),
             ],
           ),
+        );
+      },
+    );
+  }
+
+  void creatSceneSecondModal() {
+    showModalBottomSheet(
+      context: context,
+      builder: (BuildContext context) {
+        return Container(
+          height: 400,
+          width: double.infinity,
+          color: Colors.blue,
+          child: Column(children: []),
         );
       },
     );
