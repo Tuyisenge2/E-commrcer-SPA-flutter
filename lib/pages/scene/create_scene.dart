@@ -22,10 +22,11 @@ class _CreateScene extends State<CreateScene> {
             left: MediaQuery.of(context).size.width * 0.03,
             right: MediaQuery.of(context).size.width * 0.03,
           ),
-          height: MediaQuery.of(context).size.height * 0.3,
+          height: MediaQuery.of(context).size.height * 0.4,
           width: double.infinity,
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
+            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
             children: [
               Row(
                 mainAxisAlignment: MainAxisAlignment.end,
@@ -42,19 +43,48 @@ class _CreateScene extends State<CreateScene> {
                 ),
               ),
 
-              TextField(
-                decoration: InputDecoration(
-                  icon: Icon(Icons.dangerous),
-                  hintText: "",
-                  fillColor: Colors.white,
-                  filled: true,
-                  enabledBorder: OutlineInputBorder(
-                    borderSide: BorderSide(width: 2, color: Color(0xFFB9F249)),
-                  ),
-                  border: OutlineInputBorder(
-                    borderRadius: BorderRadius.all(Radius.circular(12)),
-                  ),
+              Container(
+                width: double.infinity,
+                decoration: BoxDecoration(
+                  color: Colors.white,
+                  border: Border.all(width: 2, color: Color(0xFFB9F249)),
+                  borderRadius: BorderRadius.circular(12),
                 ),
+                child: Row(
+                  crossAxisAlignment: CrossAxisAlignment.center,
+                  children: [
+                    Flexible(
+                      flex: 8,
+                      child: TextField(
+                        decoration: InputDecoration(
+                          fillColor: Colors.white,
+                          filled: true,
+                          border: InputBorder.none,
+                        ),
+                      ),
+                    ),
+                    Flexible(
+                      flex: 1,
+                      child: InkWell(
+                        onTap: () {},
+                        child: Text(
+                          "×",
+                          style: TextStyle(fontSize: 36, color: Colors.grey),
+                        ),
+                      ),
+                    ),
+                  ],
+                ),
+              ),
+              Customizedbutton(
+                label: 'Continue',
+                labelColor: Colors.black,
+                buttonColor: Color(0xFFB9F249),
+              ),
+              Customizedbutton(
+                label: 'Back',
+                labelColor: Color(0xFFB9F249),
+                buttonColor: Color(0xFF31373C),
               ),
             ],
           ),
@@ -133,7 +163,12 @@ class _CreateScene extends State<CreateScene> {
                     ),
                   ),
                   Spacer(),
-                  Customizedbutton(bottomModal: bottomModal),
+                  Customizedbutton(
+                    label: 'Create yourScene',
+                    labelColor: Colors.black,
+                    buttonColor: Color(0xFFB9F249),
+                    bottomModal: bottomModal,
+                  ),
                 ],
               ),
             ),

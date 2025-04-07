@@ -1,27 +1,35 @@
 import 'package:flutter/material.dart';
 
 class Customizedbutton extends StatelessWidget {
+  final String label;
+  final Color labelColor;
+  final Color buttonColor;
   final Function bottomModal;
-  const Customizedbutton({  this.bottomModal=defaultFuntion });
-  static defaultFuntion (){} 
+  const Customizedbutton({
+    this.bottomModal = defaultFuntion,
+    required this.label,
+    required this.labelColor,
+    required this.buttonColor,
+  });
+  static defaultFuntion() {}
   @override
   Widget build(BuildContext context) {
     return InkWell(
-      onTap: (){
-      bottomModal();
+      onTap: () {
+        bottomModal();
       },
       child: Container(
         height: 50,
         width: double.infinity,
         decoration: BoxDecoration(
-          color: Colors.lightGreen,
+          color: buttonColor,
           borderRadius: BorderRadius.circular(10),
         ),
         child: Center(
           child: Text(
-            'Create yourScene',
+            label,
             style: TextStyle(
-              color: Colors.black,
+              color: labelColor,
               fontSize: 16,
               fontWeight: FontWeight.w800,
             ),
