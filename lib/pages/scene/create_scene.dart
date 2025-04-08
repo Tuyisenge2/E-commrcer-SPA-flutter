@@ -225,12 +225,78 @@ class _CreateScene extends State<CreateScene> {
                 label: 'Continue',
                 labelColor: Colors.black,
                 buttonColor: Color(0xFFB9F249),
-                bottomModal: creatSceneSecondModal,
+                bottomModal: createSceneThirdModal,
               ),
               Customizedbutton(
                 label: 'Back',
                 labelColor: Color(0xFFB9F249),
                 buttonColor: Color(0xFF31373C),
+              ),
+            ],
+          ),
+        );
+      },
+    );
+  }
+
+  void createSceneThirdModal() {
+    showModalBottomSheet(
+      backgroundColor: Color(0xFF31373C),
+      context: context,
+      builder: (BuildContext context) {
+        return Container(
+          padding: EdgeInsets.only(
+            top: MediaQuery.of(context).size.height * 0.01,
+            left: MediaQuery.of(context).size.width * 0.03,
+            right: MediaQuery.of(context).size.width * 0.03,
+          ),
+          height: MediaQuery.of(context).size.height * 0.8,
+          width: double.infinity,
+          child: Column(
+            children: [
+              Row(
+                mainAxisAlignment: MainAxisAlignment.end,
+                children: [TimesButton(height: 20, width: 20)],
+              ),
+              Center(
+                child: Text(
+                  "Schedule",
+                  style: TextStyle(
+                    color: Colors.white,
+                    fontSize: 22,
+                    fontWeight: FontWeight.w700,
+                  ),
+                ),
+              ),
+              Container(
+                padding: EdgeInsets.only(
+                  left: MediaQuery.of(context).size.width * 0.045,
+                  right: MediaQuery.of(context).size.width * 0.045,
+                ),
+                height: 60,
+                width: double.infinity,
+                decoration: BoxDecoration(
+                  color: Color(0xFF181D23),
+                  borderRadius: BorderRadius.circular(15),
+                ),
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    Text(
+                      'Living Room',
+                      style: TextStyle(
+                        color: Color(0xFFFFFFFF),
+                        fontSize: 17,
+                        fontWeight: FontWeight.w700,
+                      ),
+                    ),
+                    SvgPicture.asset(
+                      "assets/icons/less2.svg",
+                      height: 16,
+                      width: 16,
+                    ),
+                  ],
+                ),
               ),
             ],
           ),
@@ -285,7 +351,6 @@ class _CreateScene extends State<CreateScene> {
                     ),
                   ),
                   SizedBox(height: 20),
-
                   Container(
                     padding: EdgeInsets.all(4),
                     decoration: BoxDecoration(
