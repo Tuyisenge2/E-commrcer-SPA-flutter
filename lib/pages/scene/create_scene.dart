@@ -11,6 +11,27 @@ class CreateScene extends StatefulWidget {
 }
 
 class _CreateScene extends State<CreateScene> {
+  Container circleDays(String l) {
+    return Container(
+      height: 35,
+      width: 35,
+      decoration: BoxDecoration(
+        color: Colors.white.withOpacity(.2),
+        borderRadius: BorderRadius.circular(20),
+      ),
+      child: Center(
+        child: Text(
+          l,
+          style: TextStyle(
+            color: Colors.white,
+            fontSize: 16,
+            fontWeight: FontWeight.w800,
+          ),
+        ),
+      ),
+    );
+  }
+
   void bottomModal() {
     showModalBottomSheet(
       backgroundColor: Color(0xFF31373C),
@@ -96,13 +117,81 @@ class _CreateScene extends State<CreateScene> {
 
   void creatSceneSecondModal() {
     showModalBottomSheet(
+      backgroundColor: Color(0xFF31373C),
       context: context,
       builder: (BuildContext context) {
         return Container(
-          height: 400,
+          padding: EdgeInsets.only(
+            top: MediaQuery.of(context).size.height * 0.02,
+            left: MediaQuery.of(context).size.width * 0.03,
+            right: MediaQuery.of(context).size.width * 0.03,
+          ),
+          height: MediaQuery.of(context).size.height * 0.5,
           width: double.infinity,
-          color: Colors.blue,
-          child: Column(children: []),
+          child: Column(
+            children: [
+              Row(
+                mainAxisAlignment: MainAxisAlignment.end,
+                children: [TimesButton(height: 20, width: 20)],
+              ),
+              Center(
+                child: Text(
+                  "Schedule",
+                  style: TextStyle(
+                    color: Color(0xFFB9F249),
+                    fontSize: 22,
+                    fontWeight: FontWeight.w700,
+                  ),
+                ),
+              ),
+              Container(
+                height: 100,
+                width: double.infinity,
+                decoration: BoxDecoration(
+                  color: Color(0xFF181D23),
+                  borderRadius: BorderRadius.circular(14),
+                ),
+                child: Column(
+                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                  children: [
+                    Row(
+                      children: [
+                        SizedBox(
+                          width: MediaQuery.of(context).size.width * 0.05,
+                        ),
+                        InkWell(
+                          child: Icon(Icons.repeat, color: Color(0xFFB9F249)),
+                        ),
+                        SizedBox(
+                          width: MediaQuery.of(context).size.width * 0.02,
+                        ),
+                        Text(
+                          " Repeats Every",
+                          style: TextStyle(
+                            color: Colors.white,
+                            fontSize: 18,
+                            fontWeight: FontWeight.w700,
+                          ),
+                        ),
+                      ],
+                    ),
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      spacing: MediaQuery.of(context).size.width * 0.03,
+                      children: [
+                        circleDays('M'),
+                        circleDays('T'),
+                        circleDays('W'),
+                        circleDays('T'),
+                        circleDays('F'),
+                        circleDays('S'),
+                      ],
+                    ),
+                  ],
+                ),
+              ),
+            ],
+          ),
         );
       },
     );
