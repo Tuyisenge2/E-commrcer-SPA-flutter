@@ -122,13 +122,14 @@ class _CreateScene extends State<CreateScene> {
       builder: (BuildContext context) {
         return Container(
           padding: EdgeInsets.only(
-            top: MediaQuery.of(context).size.height * 0.02,
+            top: MediaQuery.of(context).size.height * 0.01,
             left: MediaQuery.of(context).size.width * 0.03,
             right: MediaQuery.of(context).size.width * 0.03,
           ),
-          height: MediaQuery.of(context).size.height * 0.5,
+          height: MediaQuery.of(context).size.height * 0.8,
           width: double.infinity,
           child: Column(
+            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
             children: [
               Row(
                 mainAxisAlignment: MainAxisAlignment.end,
@@ -219,6 +220,17 @@ class _CreateScene extends State<CreateScene> {
                     ),
                   ],
                 ),
+              ),
+              Customizedbutton(
+                label: 'Continue',
+                labelColor: Colors.black,
+                buttonColor: Color(0xFFB9F249),
+                bottomModal: creatSceneSecondModal,
+              ),
+              Customizedbutton(
+                label: 'Back',
+                labelColor: Color(0xFFB9F249),
+                buttonColor: Color(0xFF31373C),
               ),
             ],
           ),
