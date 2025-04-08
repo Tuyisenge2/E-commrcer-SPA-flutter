@@ -190,6 +190,36 @@ class _CreateScene extends State<CreateScene> {
                   ],
                 ),
               ),
+              Container(
+                height: 70,
+                width: double.infinity,
+                decoration: BoxDecoration(
+                  color: Color(0xFF181D23),
+                  borderRadius: BorderRadius.circular(14),
+                ),
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                  children: [
+                    Flexible(
+                      child: InkWell(
+                        child: SvgPicture.asset(
+                          'assets/icons/notifications.svg',
+                        ),
+                      ),
+                    ),
+                    Flexible(
+                      flex: 5,
+                      child: Text(
+                        "get notified on your phone when this routine starts ",
+                        style: TextStyle(color: Colors.white),
+                      ),
+                    ),
+                    Flexible(
+                      child: SvgPicture.asset('assets/icons/toggleButton.svg'),
+                    ),
+                  ],
+                ),
+              ),
             ],
           ),
         );
