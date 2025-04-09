@@ -34,6 +34,27 @@ class _CreateScene extends State<CreateScene> {
     );
   }
 
+  Container deviceTextCont(String l) {
+    return Container(
+      height: 25,
+      width: 135,
+      decoration: BoxDecoration(
+        color: Colors.white.withOpacity(.1),
+        borderRadius: BorderRadius.circular(20),
+      ),
+      child: Center(
+        child: Text(
+          l,
+          style: TextStyle(
+            color: Colors.white,
+            fontSize: 16,
+            fontWeight: FontWeight.w800,
+          ),
+        ),
+      ),
+    );
+  }
+
   void bottomModal() {
     showModalBottomSheet(
       barrierColor: Colors.transparent,
@@ -406,9 +427,10 @@ class _CreateScene extends State<CreateScene> {
               top: MediaQuery.of(context).size.height * 0.45,
               left: leftPosition,
               child: ClipRRect(
+                borderRadius: BorderRadius.circular(20),
                 child: BackdropFilter(
                   filter: ImageFilter.blur(sigmaX: 10.0, sigmaY: 10.0),
-                  child: Container(
+                  child: SizedBox(
                     height: 300,
                     width: MediaQuery.of(context).size.width * 0.943333,
                     child: AlertDialog(
@@ -417,42 +439,49 @@ class _CreateScene extends State<CreateScene> {
                       titlePadding: EdgeInsets.zero,
                       actionsPadding: EdgeInsets.zero,
                       backgroundColor: Colors.transparent,
-                      //  title: const Text('Basic dialog title'),
                       content: Column(
                         mainAxisAlignment: MainAxisAlignment.start,
                         children: [
-                          Row(
+                          Column(
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
                             children: [
                               Text(
-                                'A dialog is a type of modal window that\n'
-                                'appears in front of app content to\n'
-                                'provide critical information, or prompt\n'
-                                'for a decision to be made.',
+                                "Select device to turn ",
+                                style: TextStyle(
+                                  color: Colors.white,
+                                  fontSize: 18,
+                                  fontWeight: FontWeight.w700,
+                                ),
+                              ),
+                              Row(
+                                mainAxisAlignment:
+                                    MainAxisAlignment.spaceBetween,
+                                children: [
+                                  deviceTextCont('Air Conditioner'),
+                                  deviceTextCont('Smart Led'),
+                                ],
+                              ),
+                              Row(
+                                mainAxisAlignment:
+                                    MainAxisAlignment.spaceBetween,
+                                children: [
+                                  deviceTextCont('Air Conditioner'),
+                                  deviceTextCont('Smart Led'),
+                                ],
+                              ),
+                              Row(
+                                mainAxisAlignment:
+                                    MainAxisAlignment.spaceBetween,
+                                children: [
+                                  deviceTextCont('Air Conditioner'),
+                                  deviceTextCont('Smart Led'),
+                                ],
                               ),
                             ],
                           ),
                         ],
                       ),
-                      actions: <Widget>[
-                        TextButton(
-                          style: TextButton.styleFrom(
-                            textStyle: Theme.of(context).textTheme.labelLarge,
-                          ),
-                          child: const Text('Disable'),
-                          onPressed: () {
-                            Navigator.of(context).pop();
-                          },
-                        ),
-                        TextButton(
-                          style: TextButton.styleFrom(
-                            textStyle: Theme.of(context).textTheme.labelLarge,
-                          ),
-                          child: const Text('Enable'),
-                          onPressed: () {
-                            Navigator.of(context).pop();
-                          },
-                        ),
-                      ],
                     ),
                   ),
                 ),
