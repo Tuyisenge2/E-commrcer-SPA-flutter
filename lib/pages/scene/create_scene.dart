@@ -1,3 +1,5 @@
+import 'dart:ui';
+
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:new_app/components/customizedButton.dart';
@@ -34,6 +36,7 @@ class _CreateScene extends State<CreateScene> {
 
   void bottomModal() {
     showModalBottomSheet(
+      barrierColor: Colors.transparent,
       backgroundColor: Color(0xFF31373C),
       context: context,
       builder: (BuildContext context) {
@@ -117,6 +120,7 @@ class _CreateScene extends State<CreateScene> {
 
   void creatSceneSecondModal() {
     showModalBottomSheet(
+      barrierColor: Colors.transparent,
       backgroundColor: Color(0xFF31373C),
       context: context,
       builder: (BuildContext context) {
@@ -277,6 +281,7 @@ class _CreateScene extends State<CreateScene> {
 
   void createSceneThirdModal() {
     showModalBottomSheet(
+      barrierColor: Colors.transparent,
       backgroundColor: Color(0xFF31373C),
       context: context,
       builder: (BuildContext context) {
@@ -329,6 +334,7 @@ class _CreateScene extends State<CreateScene> {
 
   void createSceneFoufthModal() {
     showModalBottomSheet(
+      barrierColor: Colors.transparent,
       backgroundColor: Color(0xFF31373C),
       context: context,
       builder: (BuildContext context) {
@@ -375,7 +381,9 @@ class _CreateScene extends State<CreateScene> {
                 label: 'Done',
                 labelColor: Colors.black,
                 buttonColor: Color(0xFFB9F249),
-                //  bottomModal: createSceneThirdModal,
+                bottomModal: () {
+                  Navigator.of(context).pop();
+                },
               ),
             ],
           ),
@@ -385,35 +393,70 @@ class _CreateScene extends State<CreateScene> {
   }
 
   Future<void> _dialogBuilder(BuildContext context) {
+    final screenWidth = MediaQuery.of(context).size.width;
+    final dialogWidth = screenWidth * 0.943333;
+    final leftPosition = (screenWidth - dialogWidth) / 2;
     return showDialog<void>(
       context: context,
+      barrierColor: Colors.transparent,
       builder: (BuildContext context) {
-        return AlertDialog(
-          title: const Text('Basic dialog title'),
-          content: const Text(
-            'A dialog is a type of modal window that\n'
-            'appears in front of app content to\n'
-            'provide critical information, or prompt\n'
-            'for a decision to be made.',
-          ),
-          actions: <Widget>[
-            TextButton(
-              style: TextButton.styleFrom(
-                textStyle: Theme.of(context).textTheme.labelLarge,
+        return Stack(
+          children: [
+            Positioned(
+              top: MediaQuery.of(context).size.height * 0.45,
+              left: leftPosition,
+              child: ClipRRect(
+                child: BackdropFilter(
+                  filter: ImageFilter.blur(sigmaX: 10.0, sigmaY: 10.0),
+                  child: Container(
+                    height: 300,
+                    width: MediaQuery.of(context).size.width * 0.943333,
+                    child: AlertDialog(
+                      contentPadding: EdgeInsets.zero,
+                      insetPadding: EdgeInsets.zero,
+                      titlePadding: EdgeInsets.zero,
+                      actionsPadding: EdgeInsets.zero,
+                      backgroundColor: Colors.transparent,
+                      //  title: const Text('Basic dialog title'),
+                      content: Column(
+                        mainAxisAlignment: MainAxisAlignment.start,
+                        children: [
+                          Row(
+                            children: [
+                              Text(
+                                'A dialog is a type of modal window that\n'
+                                'appears in front of app content to\n'
+                                'provide critical information, or prompt\n'
+                                'for a decision to be made.',
+                              ),
+                            ],
+                          ),
+                        ],
+                      ),
+                      actions: <Widget>[
+                        TextButton(
+                          style: TextButton.styleFrom(
+                            textStyle: Theme.of(context).textTheme.labelLarge,
+                          ),
+                          child: const Text('Disable'),
+                          onPressed: () {
+                            Navigator.of(context).pop();
+                          },
+                        ),
+                        TextButton(
+                          style: TextButton.styleFrom(
+                            textStyle: Theme.of(context).textTheme.labelLarge,
+                          ),
+                          child: const Text('Enable'),
+                          onPressed: () {
+                            Navigator.of(context).pop();
+                          },
+                        ),
+                      ],
+                    ),
+                  ),
+                ),
               ),
-              child: const Text('Disable'),
-              onPressed: () {
-                Navigator.of(context).pop();
-              },
-            ),
-            TextButton(
-              style: TextButton.styleFrom(
-                textStyle: Theme.of(context).textTheme.labelLarge,
-              ),
-              child: const Text('Enable'),
-              onPressed: () {
-                Navigator.of(context).pop();
-              },
             ),
           ],
         );

@@ -25,6 +25,7 @@ class RoomsComponent extends StatelessWidget {
       ),
       child: Stack(
         children: [
+        
           Positioned(
             bottom: 0,
             left: 0,
@@ -89,6 +90,8 @@ class RoomsComponent extends StatelessWidget {
               ),
             ),
           ),
+      
+      
         ],
       ),
     );
