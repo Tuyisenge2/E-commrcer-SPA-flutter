@@ -431,7 +431,7 @@ class _CreateScene extends State<CreateScene> {
                 child: BackdropFilter(
                   filter: ImageFilter.blur(sigmaX: 10.0, sigmaY: 10.0),
                   child: SizedBox(
-                    height: 300,
+                    height: 200,
                     width: MediaQuery.of(context).size.width * 0.943333,
                     child: AlertDialog(
                       contentPadding: EdgeInsets.zero,
@@ -454,13 +454,9 @@ class _CreateScene extends State<CreateScene> {
                                   fontWeight: FontWeight.w700,
                                 ),
                               ),
-                              Row(
-                                mainAxisAlignment:
-                                    MainAxisAlignment.spaceBetween,
-                                children: [
-                                  deviceTextCont('Air Conditioner'),
-                                  deviceTextCont('Smart Led'),
-                                ],
+                              SizedBox(
+                                height:
+                                    MediaQuery.of(context).size.height * 0.02,
                               ),
                               Row(
                                 mainAxisAlignment:
@@ -469,6 +465,22 @@ class _CreateScene extends State<CreateScene> {
                                   deviceTextCont('Air Conditioner'),
                                   deviceTextCont('Smart Led'),
                                 ],
+                              ),
+                              SizedBox(
+                                height:
+                                    MediaQuery.of(context).size.height * 0.02,
+                              ),
+                              Row(
+                                mainAxisAlignment:
+                                    MainAxisAlignment.spaceBetween,
+                                children: [
+                                  deviceTextCont('Air Conditioner'),
+                                  deviceTextCont('Smart Led'),
+                                ],
+                              ),
+                              SizedBox(
+                                height:
+                                    MediaQuery.of(context).size.height * 0.02,
                               ),
                               Row(
                                 mainAxisAlignment:
