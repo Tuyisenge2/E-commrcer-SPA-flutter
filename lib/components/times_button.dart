@@ -3,11 +3,19 @@ import 'package:flutter/material.dart';
 class TimesButton extends StatelessWidget {
   final double height;
   final double width;
-  const TimesButton({required this.height, required this.width});
+  final Function callback;
+  const TimesButton({
+    required this.height,
+    required this.width,
+    this.callback = defaultFun,
+  });
+  static defaultFun() {}
   @override
   Widget build(BuildContext context) {
     return InkWell(
-      onTap: () {},
+      onTap: () {
+        callback();
+      },
       child: Container(
         height: height,
         width: width,

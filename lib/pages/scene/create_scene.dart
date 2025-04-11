@@ -75,7 +75,15 @@ class _CreateScene extends State<CreateScene> {
             children: [
               Row(
                 mainAxisAlignment: MainAxisAlignment.end,
-                children: [TimesButton(height: 20, width: 20)],
+                children: [
+                  TimesButton(
+                    height: 20,
+                    width: 20,
+                    callback: () {
+                      Navigator.of(context).pop();
+                    },
+                  ),
+                ],
               ),
               Center(
                 child: Text(
@@ -131,6 +139,9 @@ class _CreateScene extends State<CreateScene> {
                 label: 'Back',
                 labelColor: Color(0xFFB9F249),
                 buttonColor: Color(0xFF31373C),
+                bottomModal: () {
+                  Navigator.of(context).pop();
+                },
               ),
             ],
           ),
@@ -158,7 +169,15 @@ class _CreateScene extends State<CreateScene> {
             children: [
               Row(
                 mainAxisAlignment: MainAxisAlignment.end,
-                children: [TimesButton(height: 20, width: 20)],
+                children: [
+                  TimesButton(
+                    height: 20,
+                    width: 20,
+                    callback: () {
+                      Navigator.of(context).pop();
+                    },
+                  ),
+                ],
               ),
               Center(
                 child: Text(
@@ -256,6 +275,9 @@ class _CreateScene extends State<CreateScene> {
                 label: 'Back',
                 labelColor: Color(0xFFB9F249),
                 buttonColor: Color(0xFF31373C),
+                bottomModal: () {
+                  Navigator.of(context).pop();
+                },
               ),
             ],
           ),
@@ -319,7 +341,15 @@ class _CreateScene extends State<CreateScene> {
             children: [
               Row(
                 mainAxisAlignment: MainAxisAlignment.end,
-                children: [TimesButton(height: 20, width: 20)],
+                children: [
+                  TimesButton(
+                    height: 20,
+                    width: 20,
+                    callback: () {
+                      Navigator.of(context).pop();
+                    },
+                  ),
+                ],
               ),
               Center(
                 child: Text(
@@ -345,6 +375,9 @@ class _CreateScene extends State<CreateScene> {
                 label: 'Back',
                 labelColor: Color(0xFFB9F249),
                 buttonColor: Color(0xFF31373C),
+                bottomModal: () {
+                  Navigator.of(context).pop();
+                },
               ),
             ],
           ),
@@ -372,7 +405,15 @@ class _CreateScene extends State<CreateScene> {
             children: [
               Row(
                 mainAxisAlignment: MainAxisAlignment.end,
-                children: [TimesButton(height: 20, width: 20)],
+                children: [
+                  TimesButton(
+                    height: 20,
+                    width: 20,
+                    callback: () {
+                      Navigator.of(context).pop();
+                    },
+                  ),
+                ],
               ),
               Center(child: SvgPicture.asset("assets/icons/tick1.svg")),
 
@@ -456,7 +497,7 @@ class _CreateScene extends State<CreateScene> {
                               ),
                               SizedBox(
                                 height:
-                                    MediaQuery.of(context).size.height * 0.02,
+                                    MediaQuery.of(context).size.height * 0.03,
                               ),
                               Row(
                                 mainAxisAlignment:
@@ -468,7 +509,7 @@ class _CreateScene extends State<CreateScene> {
                               ),
                               SizedBox(
                                 height:
-                                    MediaQuery.of(context).size.height * 0.02,
+                                    MediaQuery.of(context).size.height * 0.03,
                               ),
                               Row(
                                 mainAxisAlignment:
@@ -480,7 +521,7 @@ class _CreateScene extends State<CreateScene> {
                               ),
                               SizedBox(
                                 height:
-                                    MediaQuery.of(context).size.height * 0.02,
+                                    MediaQuery.of(context).size.height * 0.03,
                               ),
                               Row(
                                 mainAxisAlignment:
